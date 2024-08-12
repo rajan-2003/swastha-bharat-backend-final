@@ -41,7 +41,7 @@ notificationQueue.process(async (job) => {
   const { fcmToken, title, body } = job.data;
   try {
     const response = await axios.post(
-      "https://swastha-bharat-backend.onrender.com/user/notifications/push-notification",
+      "https://swastha-bharat-backend-final.onrender.com/user/notifications/push-notification",
       { fcmToken, title, body },
       { headers: { "Content-Type": "application/json" } }
     );
