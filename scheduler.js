@@ -77,6 +77,7 @@ async function checkQueueStatus() {
 
     if (waitingCount === 0 && activeCount === 0 && delayedCount === 0) {
       console.log("Queue is empty. Cleaning up jobs.");
+      console.log("hello");
       await notificationQueue.clean(0, "completed");
       await notificationQueue.clean(0, "failed");
     } else {
